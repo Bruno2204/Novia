@@ -35,3 +35,13 @@ function changePhoto() {
     // aca se deberia cambiar el elemento <img src="photo1.jpg" alt="Miamor"> por <img src=phNuevo alt="Miamor">
     document.querySelector('img').src = phNuevo;
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('background-audio');
+    audio.play().catch(function(error) {
+        console.log('Reproducción automática no permitida');
+        // Intenta reproducir nuevamente después de una interacción del usuario
+        document.addEventListener('click', function() {
+            audio.play();
+        }, { once: true });
+    });
+});

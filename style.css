@@ -37,6 +37,8 @@ section {
     user-select: none;
     cursor: pointer;
     transition: box-shadow 0.3s;
+    animation: colorful .3s linear infinite;
+
 }
 @keyframes moveUpDown {
     0%, 100% {
@@ -55,7 +57,7 @@ section:active{
     border-radius: 50%;
     overflow: hidden;
     height: 20vh;
-
+    
 }
 
 .circular-photo img {
@@ -76,6 +78,12 @@ section:active{
         transform: rotate(-45deg) scale(0.8);
     }
 }
+@keyframes colorful {
+    50%{
+        background: var(--heart-blue); /* Color azul */
+        box-shadow: -10px 10px 90px var(--heart-blue); /* Sombra azul */
+    }
+}
 .heart {
     position: relative;
     width: 70px;
@@ -85,9 +93,12 @@ section:active{
     box-shadow: -10px 10px 90px var(--heart-red);
     animation: animate .6s linear infinite;
     cursor: pointer;
+
 }
 .heart,.heart::after,.heart::before{
     transition: background 0.2s, box-shadow 0.2s;
+    animation: colorful .3s linear infinite;
+
 }
 .heart:active,.heart:active::after,.heart:active::before {
     background: var(--heart-blue); /* Color azul */
@@ -109,8 +120,10 @@ section:active{
     right: -50%;
     width: 70px;
     height: 70px;
-    background:var(--heart-red);
     border-radius: 50%;
+    background:var(--heart-red);
     box-shadow: -10px 10px 90px var(--heart-red);
 }
-    
+.hidden-audio {
+    display: none;
+}  
