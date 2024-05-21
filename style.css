@@ -22,7 +22,7 @@ body {
 
 .text {
     font-family: 'Brush Script MT', cursive;
-    font-size: 28px;
+    font-size: 2em;
     text-align: center;
     color: white;
   }
@@ -46,10 +46,11 @@ section {
 }
 
 .circular-photo {
-    width: 200px;
-    height: 200px;
+    aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
+    height: 30vh;
+
 }
 
 .circular-photo img {
