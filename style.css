@@ -17,12 +17,12 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-    background: rgb(17, 19, 34);
+    background: rgb(25, 27, 36);
 }
 
 .text {
     font-family: 'Brush Script MT', cursive;
-    font-size: x-large;
+    font-size: xx-large;
     text-align: center;
     color: white;
   }
@@ -101,8 +101,8 @@ section:active{
 
 }
 .heart:active,.heart:active::after,.heart:active::before {
-    background: var(--heart-blue); /* Color azul */
-    box-shadow: -10px 10px 90px var(--heart-blue); /* Sombra azul */
+    background: pink; /* Color azul */
+    box-shadow: -10px 10px 90px pink; /* Sombra azul */
 }
 .heart::before {
     content: '';
