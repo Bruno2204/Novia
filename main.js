@@ -11,7 +11,8 @@ msjLindos = ['Miamor','Preciosa','Te quiero mucho','Mi bb <3','Me gusta mucho tu
     'Q lindo es haberte conocido','Mi pechochochochochochcocha','Mi enojona','Mi enojosauria','Tus tetas son DEMASIADO lindas <3'
 ]
 msjActual = 'Miamor'
-
+phs =['photo1.jpg','photo2.jpg','photo3.jpg','photo4.jpg','photo6.jpg','photo7.jpg','photo8.jpg']
+phActual = 'photo1.jpg'
 function changeMessage(){
     document.getElementById("message").textContent = getRandomString(msjLindos)
 }
@@ -23,4 +24,14 @@ function getRandomString(strings) {
     } while (msjActual == msjNuevo);
     msjActual = msjNuevo
     return msjNuevo;
+}
+function changePhoto() {
+    let phNuevo = ''
+    do {
+        let randomIndex = Math.floor(Math.random() * phs.length);
+        phNuevo = phs[randomIndex]
+    } while (phActual == phNuevo);
+    phActual = phNuevo
+    // aca se deberia cambiar el elemento <img src="photo1.jpg" alt="Miamor"> por <img src=phNuevo alt="Miamor">
+    document.querySelector('img').src = phNuevo;
 }

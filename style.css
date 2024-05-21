@@ -35,6 +35,8 @@ section {
     box-shadow: 0 0 20px red;
     animation: moveUpDown 3s ease-in-out infinite;
     user-select: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
 }
 @keyframes moveUpDown {
     0%, 100% {
@@ -43,6 +45,9 @@ section {
     50% {
         transform: translateY(-50px);
     }
+}
+section:active{
+    box-shadow: 0 0 20px pink;
 }
 
 .circular-photo {
